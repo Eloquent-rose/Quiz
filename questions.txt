@@ -1,0 +1,238 @@
+Q1. What are the two ways that a controller and extension can be specified for a custom object name "Notice" on visforce page?
+
+Choose 2 answers 
+
+A. apex:page standardController="Notice__c" extensions="myContollerExtension"
+B. apex:page Notice__c extends="myContollerExtension"
+C. apex:page controllers="Notice__c, myContollerExtension"
+D. apex:page controller="Notice__c" extensions="myContollerExtension"
+
+ANS => A, D
+---------------------------------------------------------
+Q2. A developer wants to invoke an outbound message when a record meets specific criteria.
+Which two features satisfy this use case?
+
+Choose 2 answers
+
+A. Process Builder can be used to check the record criteria and send an outbound message.
+B. Flow Builder can be used to check the record criteria and send an outbound message.
+C. Next Best Action can be used to check the record criteria and send an outbound message.
+D. Approval Process has the capability to check the record criteria and send an outbound message.
+
+ANS => B, D
+---------------------------------------------------------
+Q3. A developer must create a Lightning component that allows users to input Contact record information to create a Contact record, including a Salary_c Custom field.
+What should the developer use, along with a lightning-record-edit-form, so that salary_c field functions as a currency input and is only viewable and editable
+
+A. <lightning-input-currency value="Salary_c"> </lightning-input-currency>
+B. <lightning-input-field field-name="Salary_c"></lightning-input-field>
+C. <lightning-formatted-number value="Salary__c" format-style="currency"> </lightning-formatted-number> 
+D. <lightning-input type="number" value="Salary_c" formatter="currency"> </lightning-input>
+
+ANS => B
+---------------------------------------------------------
+Q4. A developer must troubleshoot to pinpoint the causes of performance issues when a custom page loads in their org.
+Which tool should the developer use to troubleshoot?
+
+A. AppExchange
+B. Developer Console
+C. Visual Studio Code IDE
+D. Setup Menu
+
+ANS => B
+---------------------------------------------------------
+Q5. In terms of the MVC paradigm, what are two advantages of implementing the view layer of a Salesforce application using Lightning Web Component-based development over Visualforce?
+
+Choose 2 answers
+
+A. Rich component ecosystem
+B. Self-contained and reusable units of an application
+C. Server-side run-time debugging
+D. Automatic code generation
+
+ANS => A, B
+---------------------------------------------------------
+Q6. A developer writes a single trigger on the Account object on the after insert and after update events. A workflow rule modifies a field every time an Account is created or updated.
+How many times will the trigger fire if a new Account is inserted, assuming no other automation logic is implemented on the Account?
+
+A. 8
+B. 4
+C. 1
+D. 2
+
+ANS => D
+---------------------------------------------------------
+Q7. A developer receives an error when trying to call a global server-side method using the @remoteAction decorator.
+How can the developer resolve the error?
+
+A. Decorate the server-side method with (static=true).
+B. Change the function signature to be private static.
+C. Decorate the server-side method with (static=false).
+D. Add static to the server-side method signature.
+
+ANS => D
+---------------------------------------------------------
+Q8. What are two ways a developer can get the status of an enqueued job for a class that implements the queueable interface?
+
+Choose 2 answers
+
+A. View the Apex Flex Queue
+B. View the Apex Jobs Page
+C. View the Apex Status Page
+D. Query the AsyncApex Job object
+
+ANS => B, D
+---------------------------------------------------------
+Q9. Which two operations can be performed using a formula field?
+
+Choose 2 answers
+
+A. Displaying the last four digits of an encrypted Social Security number
+B. Triggering a Process Builder
+C. Displaying an Image based on the Opportunity Amount
+D. Calculating a score on a Lead based on the information from another field
+
+ANS => C, D
+---------------------------------------------------------
+Q10. Which Lightning code segment should be written to declare dependencies on a Lightning component, c:accountList, that is used in a Visualforce page?
+
+A.  <aura: application access="GLOBAL" extends="itng: outApp"> 
+        <aura:dependency resource="c:accountList"/> 
+    </aura:application>
+B.  <aura:application access="GLOBAL">
+        <aura:dependency resource="c:accountList"/>
+    </aura:application>
+C. <aura: component access="GLOBAL" extends="itng:outApp"> 
+        <aura: dependency resource="c:accountList"/>
+    </aura: component>  
+D.  <aura:component access="GLOBAL">
+        <aura:dependency resource="c:accountList"/>
+    </aura: component>
+
+ANS => A
+---------------------------------------------------------
+Q11. A developer must provide custom user interfaces when users edit a Contact in either Salesforce Classic or Lightning Experience.
+What should the developer use to override the Contact's Edit button and provide this functionality?
+
+A. A Visualforce page in Salesforce Classic and a Lightning component in Lightning Experience
+B. A Lightning component in Salesforce Classic and a Lightning component in Lightning Experience
+C. A Lightning page in Salesforce Classic and a Visualforce page in Lightning Experience 
+D. A Visualforce page in Salesforce Classic and a Lightning page in Lightning Experience
+
+ANS => A
+---------------------------------------------------------
+Q12. What are three capabilities of the <1tng: require> tag when loading JavaScript resources in Aura components?
+
+Choose 3 answers
+
+A. Loading externally hosted scripts
+B. Loading files from Documents
+C. Specifying loading order
+D. Loading scripts in parallel
+E. One-time loading for duplicate scripts
+
+ANS => C, D, E
+---------------------------------------------------------
+Q13. What is a benefit of developing applications in a multi-tenant environment?
+
+A. Access to predefined computing resources
+B. Unlimited processing power and memory
+C. Enforced best practices for development  
+D. Default out-of-the-box configuratio
+
+ANS => A
+---------------------------------------------------------
+Q14. Assuming that 'name' is a String obtained by an <apex:inputText> tag on a Visualforce page, which two SOQL queries performed are safe from SOQL injection?
+
+Choose 2 answers
+
+A. String query = 'SELECT Id FROM Account WHERE Name LIKE \' % ' + String.escapeSingleQuotes(name) + ' % \' ';
+    List<Account> results= Database.query(query);
+B. String query = '%' + name +'%':
+    List<Account> results = [SELECT Id FROM Account WHERE Name LIKE :query); 
+C. String query = SELECT Id FRCN Account WHERE Name LIKE \' % ' + name.noQuotes() + ' % \' ';
+    LIst<Account> results= Database.query (query);
+D. String query = 'SELECT id FROM Account WHERE Name LIKE \' % ' + name + ' % \' ';
+   List<Account> results = Database.query(query);
+
+ANS => A, B
+---------------------------------------------------------
+Q15. Universal Containers has an order system that uses an Order Number to identify an order for customers and service agents. Order records will be imported into Salesforce.
+How should the Order Number field be defined in Salesforce?
+
+A. Direct Lookup
+B. Lookup
+C. Indirect Lookup
+D. Number with External ID
+
+ANS => D
+---------------------------------------------------------
+Q16. A developer wants to get access to the standard price book in the org while writing a test class that covers an OpportunityLineItem trigger.
+Which method allows access to the price book?
+
+A. Use @TestVisible to allow the test method to see the standard price book.
+8. Use @IsTest (SeeAllData=true) and delete the existing standard price book.
+C. Use Test.loadData() and a static resource to load a standard price book. 
+D. Use Teat.getStandardPricebookId() to get the standard price book ID.
+
+ANS => D
+---------------------------------------------------------
+Q17. A developer wants to retrieve the Contacts and Users with the email address dev@uc.com.
+Which SOSL statement should the developer use?
+
+A. FIND Email IN Contact, User FOR (dev2uc.com)
+B. FIND (Email = 'dev@uc.com"} RETURNING Contact (Email), User (Email)
+C. FIND (Email = 'dev@uc.com') IN Contact, User
+D. FIND (dev@uc.com) IN Email Fields RETURNING Contact (Email), User (Email) 
+
+ANS => D
+---------------------------------------------------------
+Q18. Given the following trigger implementation:
+        trigger leadTrigger on Lead (before update) { 
+            final ID BUSINESS_RECORDTYPEID = '0125000000090ad';
+            for (Lead thislead: Trigger.new) { 
+                if( thislead.Company != null && thisLead.RecordTypeId != BUSINESS_RECORDTYPEID ){ 
+                    thislead.RecordTypeId = BUSINESS_RECORDTYPEID;
+                }
+            }
+        }
+
+The developer receives deployment errors every time a deployment is attempted from a sandbox to Production.
+
+What should the developer do to ensure a successful deployment?
+
+A. Ensure a record type with an ID of BUSINESS RECORDTYPEID exists on Production prior to deployment.
+B. Ensure BUSINESS RECORDTYPEID IS pushed as part of the deployment components.
+C. Ensure the deployment is validated by a System Admin user on Production.
+D. Ensure BUSINESS RECORDTYPEID IS retrieved using schema. Describe calls. 
+
+ANS => B
+---------------------------------------------------------
+Q19. Since Aura application events follow the traditional publish-subscribe model, which method is used to fire an event?
+
+A. registerEvent()
+B. emit()
+C. fireEvent()
+D. fire()
+
+ANS => D
+---------------------------------------------------------
+Q20. Universal Containers (UC) wants to lower its shipping cost while making the shipping process more efficient. The Distribution Officer advises UC to implement global addresses to allow multiple Accounts to share a default pickup address. The developer is tasked to create the supporting object and relationship for this business requirement and uses the Setup Menu to create a custom object called "Global Address".
+Which field should the developer add to create the most efficient model that supports the business need?
+
+A. Add a lookup field on the Account object to the Global Address object.
+B. Add a master-detail field on the Global Address object to the Account object.
+C. Add a lookup field on the Global Address object to the Account object.
+D. Add a master-detail field on the Account object to the Global Address object.
+
+ANS => A
+---------------------------------------------------------
+Q21. A custom object Trainer_c has a lookup field to another custom object Gym_c.
+Which SOQL query will get the record for the Viridian City Gym and all it's trainers?
+
+A. SELECT ID, (SELECT Id FROM Trainer__c) FROM Gym__c WHERE Name = 'Viridian City Gym'
+B. SELECT ID, (SELECT Id FROM Trainer__c) FROM Gym__c WHERE Name = 'Viridian City Gym'
+C. SELECT ID FROM Trainer_c WHERE Gym__r.Name = 'Viridian City Gym¹
+D. SELECT ID, (SELECT id FROM Trainer_c) FROM Gym____c WHERE Name =  'Viridian City Gym'
+
+ANS => D
